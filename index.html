@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .content {
+            display: grid;
+            place-items: center;
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+        .content-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 10px;
+        }
+        .right {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            place-items: center;
+            gap: 60px 30px;
+        }
+        .right div {
+            padding: 12px;
+        }
+        .instagram-stories {
+            display: flex;
+            gap: 50px;
+        }
+        .instagram-stories .story {
+            background: linear-gradient(to right, red, blue);
+            padding: 3px;
+            border-radius: 100%;
+            display: flex;
+            place-items: center;
+        }
+        .instagram-stories .story img {
+            border-radius: 100%;
+        }
+
+        .content-container .left img {
+            max-width: 100%;
+        }
+        .instagram-stories::-webkit-scrollbar {
+            display: none;
+        }
+        @media screen and (max-width: 576px) {
+            .instagram-stories {
+                width: 100%;
+                overflow-x: scroll;
+                display: grid;
+                grid-template-columns: repeat(8,1fr);
+                -ms-overflow-style: none;  /* IE and Edge */
+                scrollbar-width: none;  /* Firefox */
+                gap: 12px;
+            }
+            .content-container {
+                place-items: center;
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="title-container">
+            <h1 class="title">
+                Lorem Ipsum Dolor Sit
+            </h1>
+        </div>
+        <div class="instagram-stories">
+            <div class="story"><img src="//unsplash.it/72/72" alt=""></div>
+            <div class="story"><img src="//unsplash.it/72/72" alt=""></div>
+            <div class="story"><img src="//unsplash.it/72/72" alt=""></div>
+            <div class="story"><img src="//unsplash.it/72/72" alt=""></div>
+            <div class="story"><img src="//unsplash.it/72/72" alt=""></div>
+            <div class="story"><img src="//unsplash.it/72/72" alt=""></div>
+            <div class="story"><img src="//unsplash.it/72/72" alt=""></div>
+            <div class="story"><img src="//unsplash.it/72/72" alt=""></div>
+        </div>
+        <div class="content-container">
+            <div class="left">
+                <img src="//unsplash.it/500/300" alt="">
+            </div>
+            <div class="right">
+                <div class="card">
+                    <span class="title">Bold Text</span>
+                    <p class="card-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, similique?</p>
+                </div>
+                <div class="card">
+                    <span class="title">Bold Text</span>
+                    <p class="card-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, similique?</p>
+                </div>
+                <div class="card">
+                    <span class="title">Bold Text</span>
+                    <p class="card-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, similique?</p>
+                </div>
+                <div class="card">
+                    <span class="title">Bold Text</span>
+                    <p class="card-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, similique?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
